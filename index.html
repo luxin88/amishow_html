@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>@米Show</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@0.18.0/dist/axios.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@4.4.6/dist/js/swiper.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@4.4.6/dist/css/swiper.css">
+    <link rel="stylesheet" href="asserts/style/index.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_990755_31gor0funlp.css">
+    <link rel="stylesheet" href="asserts/style/media.css">
+</head>
+<body style="background: #f6f6f6;">
+<!-- header:begin -->
+<div class="header-suspension">
+    <div class="header">
+        <div class="content">
+            <a href="#" class="logo">
+                <img src="asserts/images/logo.png" alt="@MiShow">
+            </a>
+            <div class="btn-sk clearfix">
+                <div class="nav">
+                    <a href="#" class="active">首页</a>
+                    <a href="#">@米专栏</a>
+                    <a href="#">@米脱口秀</a>
+                    <a href="#">跨境新商业百人</a>
+                    <a href="#">@米导读</a>
+                    <a href="#">米粉活动</a>
+                    <a href="#">你问米答</a>
+                    <a href="#">关于我们</a>
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="register-Land mobile-hide">
+                    <a href="#" class="Submission mobile-hide">寻求报道</a>
+                    <a href="#" class="">登录</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- header:end -->
+
+<!-- content:start -->
+<div class="in-info content clearfix">
+    <div class="in-info-left">
+        <div class="in-banner">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" style="background-image: url(uploads/0.jpg)">
+                        <a href="#" target="_blank"></a>
+                        <h3>美元余额宝如何给卖家钱生钱？</h3>
+                    </div>
+                    <div class="swiper-slide" style="background-image: url(uploads/1.jpg)">
+                        <a href="#" target="_blank"></a>
+                        <h3>应对跨境电商动荡期不传秘方竟被公开？</h3>
+                    </div>
+                    <div class="swiper-slide" style="background-image: url(uploads/2.jpg)">
+                        <a href="#" target="_blank"></a>
+                        <h3>发力本土化Tophatter新团队新模式掀起跨境新浪潮</h3>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        <div class="in-article"></div>
+    </div>
+    <div class="in-info-right">
+        <div class="in-right-horizontal">
+            <a href="#" target="_blank" title="广告" class="in-right-horizontal-list">
+                <img src="uploads/3.jpg">
+                <span>广告</span>
+            </a>
+        </div>
+        <div class="in-right-video">
+            <h3 class="in-info-right-title">
+                <i class="iconfont icon-video"></i>推荐视频</h3>
+            <a href="#" class="in-right-video-list">
+                <img class="in-right-video-listImg" src="uploads/4.jpg" alt="发力本土化Tophatter新团队新模式掀起跨境新浪潮">
+                <div class="in-right-video-listImg-text">
+                    <p>发力本土化Tophatter新团队新模式掀起跨境新浪潮</p>
+                </div>
+
+                <a href="#" class="in-right-video-list">
+                    <img class="in-right-video-listImg" src="uploads/5.jpg" alt="发力本土化Tophatter新团队新模式掀起跨境新浪潮">
+                    <div class="in-right-video-listImg-text">
+                        <p>发力本土化Tophatter新团队新模式掀起跨境新浪潮</p>
+                    </div>
+                </a>
+
+                <a href="#" class="in-right-video-list">
+                    <img class="in-right-video-listImg" src="uploads/6.jpg" alt="发力本土化Tophatter新团队新模式掀起跨境新浪潮">
+                    <div class="in-right-video-listImg-text">
+                        <p>发力本土化Tophatter新团队新模式掀起跨境新浪潮</p>
+                    </div>
+                </a>
+            </a>
+        </div>
+    </div>
+</div>
+<!-- content:end -->
+<script>
+    var mySwiper = new Swiper('.in-banner .swiper-container', {
+        loop: true,
+        //direction: 'vertical',
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+    });
+    var swiper_wrapper = document.querySelector('.swiper-wrapper');
+    swiper_wrapper.onmouseenter = function () {
+        mySwiper.autoplay.stop();
+    }
+    swiper_wrapper.onmouseout = function () {
+        mySwiper.autoplay.start();
+    }
+</script>
+
+</body>
+</html>
