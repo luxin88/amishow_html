@@ -40,6 +40,11 @@
                     <a href="#" class="">登录</a>
                 </div>
             </div>
+            <label for="nav-checkbox" class="nav-trigger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
         </div>
     </div>
 </div>
@@ -125,6 +130,11 @@
     swiper_wrapper.onmouseout = function () {
         mySwiper.autoplay.start();
     }
+
+    document.querySelector('.nav-trigger').addEventListener('click', function () {
+        document.querySelector('body').classList.toggle('fixme');
+        document.querySelector('.header .nav').classList.toggle('active');
+    });
 </script>
 
 </body>

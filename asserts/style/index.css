@@ -106,6 +106,10 @@ a, span, th, td, i, em, h1, h2, h3, h4, h5, h6 {
 .header .nav a.active {
     color: rgb(204,38,31);
     font-weight: bold;
+    border-bottom: solid 2px rgb(204,38,31);
+}
+.header .nav a:hover {
+    border-bottom: solid 2px rgb(204,38,31);
 }
 .header .nav a {
     font-size: 16px;
@@ -295,4 +299,125 @@ a, span, th, td, i, em, h1, h2, h3, h4, h5, h6 {
     font-size: 16px;
     line-height: 22px;
     max-height: 44px;
+}
+.nav-trigger {
+    display: none;
+    margin-right: -5px;
+    padding: 5px;
+    position: fixed;
+    right: 12px;
+    top: 12.5px;
+    z-index: 110;
+}
+.nav-trigger > span {
+    background-color: #000;
+    border-radius: 2px;
+    display: block;
+    height: 2px;
+    margin-top: 5px;
+    -webkit-transition: 0.25s ease-out 0s;
+    transition: 0.25s ease-out 0s;
+    width: 24px;
+}
+.nav-trigger > span:first-child {
+    margin-top: 0;
+}
+#nav-checkbox:checked ~ .nav-trigger > span {
+    background-color: #fff;
+}
+#nav-checkbox:checked ~ .nav-trigger > span:first-child,
+#nav-checkbox:checked ~ .nav-trigger > span:last-child {
+    width: 10px;
+}
+#nav-checkbox:checked ~ .nav-trigger > span:first-child {
+    -webkit-transform: translateY(9px) rotate(-45deg);
+    transform: translateY(9px) rotate(-45deg);
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+}
+#nav-checkbox:checked ~ .nav-trigger > span:last-child {
+    -webkit-transform: translateY(-9px) rotate(45deg);
+    transform: translateY(-9px) rotate(45deg);
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+}
+.fixme .nav-trigger span:first-child {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    position: relative;
+    top: 7px;
+}
+.fixme .nav-trigger span:nth-child(2) {
+    display: none;
+}
+.fixme .nav-trigger {
+    animation: 0.5s rotate-nav-trigger 0.5s;
+}
+
+@keyframes rotate-nav-trigger {
+    from {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to{
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+}
+
+.fixme .nav-trigger span:last-child {
+    /*-webkit-transform: rotate(-45deg);*/
+    /*-moz-transform: rotate(-45deg);*/
+    /*-o-transform: rotate(-45deg);*/
+    /*-ms-transform: rotate(-45deg);*/
+    /*transform: rotate(-45deg);*/
+}
+
+#nav-checkbox:checked ~ .pg-header .navbar {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    visibility: visible;
+}
+#nav-checkbox:checked ~ .pg-header .navbar li {
+    color: #fff;
+}
+#nav-checkbox:checked ~ .pg-header .navbar ul {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    -webkit-transition-delay: 0.3s;
+    transition-delay: 0.3s;
+    visibility: visible;
+}
+.nav-trigger > span:first-child {
+    margin-top: 0;
+}
+#nav-checkbox:checked ~ .nav-trigger > span {
+    background-color: #fff;
+}
+#nav-checkbox:checked ~ .nav-trigger > span:first-child,
+#nav-checkbox:checked ~ .nav-trigger > span:last-child {
+    width: 10px;
+}
+#nav-checkbox:checked ~ .nav-trigger > span:first-child {
+    -webkit-transform: translateY(9px) rotate(-45deg);
+    transform: translateY(9px) rotate(-45deg);
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+}
+#nav-checkbox:checked ~ .nav-trigger > span:last-child {
+    -webkit-transform: translateY(-9px) rotate(45deg);
+    transform: translateY(-9px) rotate(45deg);
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
 }
