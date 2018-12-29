@@ -306,22 +306,100 @@ a, span, th, td, i, em, h1, h2, h3, h4, h5, h6 {
     padding: 5px;
     position: fixed;
     right: 12px;
-    top: 12.5px;
+    top: 8.5px;
     z-index: 110;
 }
-.nav-trigger > span {
-    background-color: #000;
-    border-radius: 2px;
-    display: block;
-    height: 2px;
-    margin-top: 5px;
-    -webkit-transition: 0.25s ease-out 0s;
-    transition: 0.25s ease-out 0s;
+
+.nav-trigger > .nav-more {
     width: 24px;
+    height: 24px;
+    padding: 0;
+    margin: 0;
 }
-.nav-trigger > span:first-child {
-    margin-top: 0;
+
+.nav-trigger > .nav-more i {
+    font-size: 24px;
 }
+
+.fixme .nav-trigger .nav-more {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: relative;
+}
+.in-info-left .in-article {
+    margin-top: 20px;
+    border: 1px solid #eeeeee;
+    box-shadow: 0 0 5px #ececec;
+}
+.in-info-left .in-article .in-article-nav {
+    border-bottom: 1px solid #ececec;
+    font-size: 0;
+    overflow-x: auto;
+    white-space: nowrap;
+    background: #fff;
+    padding-left: 14px;
+    position: relative;
+}
+.in-info-left .in-article .in-article-nav a {
+    font-size: 16px;
+    color: #828a92;
+    font-weight: bold;
+    padding-left: 5px;
+    padding-right: 5px;
+    position: relative;
+    display: inline-block;
+    line-height: 54px;
+    margin-left: 20px;
+    margin-right: 20px;
+    -webkit-transition: 0.4s ease all;
+    transition: 0.4s ease all;
+}
+.in-info-left .in-article .in-article-nav a.active {
+    color: rgb(204,38,31);
+    border-bottom: solid 2px rgb(204, 38, 31);
+}
+.in-info-group-btn {
+    line-height: 54px;
+    text-align: center;
+    font-size: 14px;
+    color: #666666;
+    background: #fff;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    box-shadow: 0 2px 5px #e1e1e1;
+    transition: all ease 0.5s;
+    -webkit-transition: all ease 0.5s;
+    -moz-transition: all ease 0.5s;
+    -o-transition: all ease 0.5s;
+    -ms-transition: all ease 0.5s;
+}
+.in-info-group-btn span {
+    vertical-align: middle;
+}
+.in-info-group-btn i {
+    display: none;
+    vertical-align: middle;
+    position: relative;
+    animation: Circle 1s linear infinite;
+    -webkit-animation: Circle 1s linear infinite;
+}
+
+
+
+
+
+
+
+
+
+
+
 #nav-checkbox:checked ~ .nav-trigger > span {
     background-color: #fff;
 }
@@ -341,46 +419,6 @@ a, span, th, td, i, em, h1, h2, h3, h4, h5, h6 {
     -webkit-transform-origin: left top;
     transform-origin: left top;
 }
-.fixme .nav-trigger span:first-child {
-    -webkit-transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
-    -o-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    transform: rotate(90deg);
-    position: relative;
-    top: 7px;
-}
-.fixme .nav-trigger span:nth-child(2) {
-    display: none;
-}
-.fixme .nav-trigger {
-    animation: 0.5s rotate-nav-trigger 0.5s;
-}
-
-@keyframes rotate-nav-trigger {
-    from {
-        -webkit-transform: rotate(0deg);
-        -moz-transform: rotate(0deg);
-        -o-transform: rotate(0deg);
-        -ms-transform: rotate(0deg);
-        transform: rotate(0deg);
-    }
-    to{
-        -webkit-transform: rotate(45deg);
-        -moz-transform: rotate(45deg);
-        -o-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-        transform: rotate(45deg);
-    }
-}
-
-.fixme .nav-trigger span:last-child {
-    /*-webkit-transform: rotate(-45deg);*/
-    /*-moz-transform: rotate(-45deg);*/
-    /*-o-transform: rotate(-45deg);*/
-    /*-ms-transform: rotate(-45deg);*/
-    /*transform: rotate(-45deg);*/
-}
 
 #nav-checkbox:checked ~ .pg-header .navbar {
     opacity: 1;
@@ -398,9 +436,6 @@ a, span, th, td, i, em, h1, h2, h3, h4, h5, h6 {
     -webkit-transition-delay: 0.3s;
     transition-delay: 0.3s;
     visibility: visible;
-}
-.nav-trigger > span:first-child {
-    margin-top: 0;
 }
 #nav-checkbox:checked ~ .nav-trigger > span {
     background-color: #fff;
