@@ -284,9 +284,10 @@ a, span, th, td, i, em, h1, h2, h3, h4, h5, h6 {
 }
 .in-info-right .in-right-video .in-right-video-list .in-right-video-listImg-text {
     padding: 10px 20px;
-    box-sizing: content-box;
     position: absolute;
     bottom: 0px;
+    width: 100%;
+    box-sizing: border-box;
     background: rgba(0, 0, 0, 0.64);
 }
 .in-info-right .in-right-video .in-right-video-list p {
