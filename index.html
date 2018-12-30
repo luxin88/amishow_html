@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>@米Show</title>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
@@ -80,7 +81,38 @@
                 <a href="javascript:;">人物</a>
                 <a href="javascript:;">专访</a>
             </div>
-            <div class="in-article-group"></div>
+            <div class="in-article-group">
+                <a v-bind:href="item.url" class="in-article-list" v-for="item in list">
+                    <div class="in-article-list-img" v-bind:style="'background-image: url('+item.features_image+')'">
+                        <!--<span>资讯</span>-->
+                    </div>
+                    <div class="in-article-list-text">
+                        <h3>{{ item.title }}</h3>
+                        <p>{{ item.summary }}</p>
+                        <div class="in-article-list-fot clearfix">
+                            <div class="in-article-list-icon">
+                                <!--<div class="in-article-list-i">-->
+                                <!--<img src="/upload/image/2018-11/ed445ab00377573514c5afb04538b09a.jpg" alt="">-->
+                                <!--<span>Rita</span>-->
+                                <!--</div>-->
+                                <div class="in-article-list-i">
+                                    <i class="iconfont icon-shijian"></i>
+                                    <span>{{ item.publish_time }}</span>
+                                </div>
+                            </div>
+
+                            <div class="in-article-list-zan">
+                                <i class="iconfont icon-good"></i>
+                                <span class="num">{{ item.zan }}</span>
+                            </div>
+                            <div class="in-article-list-zan">
+                                <i class="iconfont icon-liulan"></i>
+                                <span>{{ item.views }}</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
             <div class="in-info-group-btn">
                 <span>查看更多</span>
                 <i class="iconfont icon-loding"></i>
@@ -121,38 +153,6 @@
     </div>
 </div>
 <!-- content:end -->
-<script type="text/x-template" id="in-article-list">
-    <a href="/detail/328" class="in-article-list">
-        <div class="in-article-list-img" style="background-image: url(/upload/image/2018-12/d2e4e5910d5dd4eabf2937b73036d72c.jpg)">
-            <span>资讯</span>
-        </div>
-        <div class="in-article-list-text">
-            <h3>永辉超市还在找经营方向，准备做社区团购</h3>
-            <p>传统超市想低成本转型新零售并不容易。</p>
-            <div class="in-article-list-fot clearfix">
-                <div class="in-article-list-icon">
-                    <div class="in-article-list-i">
-                        <img src="/upload/image/2018-11/ed445ab00377573514c5afb04538b09a.jpg" alt="">
-                        <span>Rita</span>
-                    </div>
-                    <div class="in-article-list-i">
-                        <i class="iconfont icon-shijian"></i>
-                        <span>25分钟前</span>
-                    </div>
-                </div>
-
-                <div class="in-article-list-zan" data-prise data-id="328">
-                    <i class="iconfont icon-good"></i>
-                    <span class="num">0</span>
-                </div>
-                <div class="in-article-list-zan">
-                    <i class="iconfont icon-liulan"></i>
-                    <span>7</span>
-                </div>
-            </div>
-        </div>
-    </a>
-</script>
 <script>
     var mySwiper = new Swiper('.in-banner .swiper-container', {
         loop: true,
@@ -180,6 +180,27 @@
         document.querySelector('body').classList.toggle('fixme');
         document.querySelector('.header .nav').classList.toggle('active');
     });
+
+    var page = 1;
+
+    var articleVM = new Vue({
+        el: '.in-article-group',
+        data: {
+            list: []
+        },
+        methods: {
+            loadList: function (page) {
+                var that = this;
+                axios.get("in_article.json?page=" + page).then(response => (this.list = this.list.concat(response.data.payload)));
+            }
+        }
+    });
+    articleVM.loadList(page);
+    document.querySelector('.in-info-group-btn').addEventListener('click', function () {
+        page ++;
+        articleVM.loadList(page);
+    })
+
 </script>
 
 </body>

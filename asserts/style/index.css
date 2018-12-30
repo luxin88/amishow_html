@@ -393,8 +393,167 @@ a, span, th, td, i, em, h1, h2, h3, h4, h5, h6 {
 .in-info-left .in-article .in-article-group {
     background: #fff;
 }
+.in-info-left .in-article .in-article-group .in-article-list {
+    display: block;
+    padding: 28px 24px;
+    border-bottom: 1px solid #ededed;
+    transition: all ease 0.5s;
+    -webkit-transition: all ease 0.5s;
+    -moz-transition: all ease 0.5s;
+    -o-transition: all ease 0.5s;
+    -ms-transition: all ease 0.5s;
+}
+.in-info-left .in-article .in-article-group .in-article-list .in-article-list-img {
+    padding-top: 20.2%;
+    display: inline-block;
+    vertical-align: middle;
+    width: 32.14%;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-right: 1.86%;
+    position: relative;
+}
+.in-info-left .in-article .in-article-group .in-article-list .in-article-list-img span {
+    color: #fff;
+    font-size: 13px;
+    width: 54px;
+    display: block;
+    position: absolute;
+    text-align: center;
+    height: 20px;
+    top: 10px;
+    left: 0;
+    background: rgba(51, 51, 51, 0.7);
+    border-radius: 0 10px 10px 0;
+}
+.in-info-left .in-article .in-article-group .in-article-list .in-article-list-text {
+    position: relative;
+    width: 66%;
+    float: right;
+    height: 168px;
+}
+.in-info-left .in-article .in-article-group .in-article-list .in-article-list-text h3 {
+    color: #000000;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 14px;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-transition: 0.3s ease all;
+    transition: 0.3s ease all;
+}
+.in-info-left .in-article .in-article-group .in-article-list .in-article-list-text p {
+    color: #898989;
+    font-size: 14px;
+    line-height: 24px;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    max-height: 48px;
+}
+.in-info-left .in-article .in-article-group .in-article-list .in-article-list-text .in-article-list-fot {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}
+.in-info-left .in-article .in-article-group .in-article-list .in-article-list-text .in-article-list-fot .in-article-list-icon {
+    float: left;
+}
+.in-info-left .in-article .in-article-group .in-article-list .in-article-list-text .in-article-list-fot .in-article-list-i {
+    display: inline-block;
+    margin-right: 32px;
+}
+.in-info-left .in-article .in-article-group .in-article-list .in-article-list-text .in-article-list-fot .in-article-list-i img {
+    display: inline-block;
+    vertical-align: middle;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+}
+.in-info-left .in-article .in-article-group .in-article-list .in-article-list-text .in-article-list-fot .in-article-list-i span {
+    color: #898989;
+    font-size: 12px;
+    vertical-align: middle;
+    margin-left: 2px;
+}
+.in-info-left .in-article .in-article-group .in-article-list .in-article-list-text .in-article-list-fot .in-article-list-i i {
+    color: #909090;
+    font-size: 16px;
+    vertical-align: -2px;
+}
+.in-info-left .in-article .in-article-group .in-article-list .in-article-list-text .in-article-list-fot .in-article-list-zan {
+    float: right;
+    margin-left: 30px;
+    position: relative;
+}
+.in-info-left .in-article .in-article-group .in-article-list .in-article-list-text .in-article-list-fot .in-article-list-zan i {
+    font-size: 20px;
+    color: #909090;
+    vertical-align: middle;
+}
+.in-info-left .in-article .in-article-group .in-article-list .in-article-list-text .in-article-list-fot .in-article-list-zan .tips {
+    color: #00bb54;
+}
+.in-info-left .in-article .in-article-group .in-article-list .in-article-list-text .in-article-list-fot .in-article-list-zan span {
+    color: #909090;
+    font-size: 12px;
+    vertical-align: middle;
+}
 
-
+.in-info-left .in-article .in-article-group .in-article-list:hover .in-article-list-text h3 {
+    color: rgb(204,38,31);
+}
+.in-info-left .in-article .in-article-group .in-article-list:hover {
+    box-shadow: 0px 0px 16px #eee;
+}
+.in-info-left .in-article .in-article-group .in-article-list .in-article-list-text .in-article-list-fot .in-article-list-zan.active i {
+    color: rgb(204,38,31);
+}
+.in-info-left .in-article .in-article-group .in-article-list .in-article-list-text-news {
+    width: 100%;
+    float: none;
+    height: auto;
+}
+.in-info-left .in-article .in-article-group .in-article-list .in-article-author-text {
+    width: 82%;
+    height: 110px;
+}
+.in-info-left .in-article .in-article-group .in-article-list .in-article-author-text h3 {
+    padding-top: 5px;
+}
+.in-info-left .in-article .in-article-group .in-article-list .in-article-list-act-text {
+    padding-top: 40px;
+    height: 120px;
+}
+.in-info-left .in-article .in-article-group .in-article-list .in-article-list-act-text .y-end {
+    background: #cdcdcd;
+    position: absolute;
+    font-size: 12px;
+    color: #fff;
+    padding: 6px 5px;
+    border-radius: 3px;
+    right: 0;
+    top: 38px;
+}
+.in-info-left .in-article .in-article-group .in-article-list .in-article-list-act-text .y-start {
+    background: rgb(204,38,31);
+    color: #fff;
+    position: absolute;
+    font-size: 12px;
+    color: #fff;
+    padding: 6px 5px;
+    border-radius: 3px;
+    right: 0;
+    top: 38px;
+}
 
 
 
