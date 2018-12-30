@@ -368,9 +368,6 @@ a, span, th, td, i, em, h1, h2, h3, h4, h5, h6 {
     font-size: 14px;
     color: #666666;
     background: #fff;
-    border-radius: 5px;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
     cursor: pointer;
     margin-top: 20px;
     box-shadow: 0 2px 5px #e1e1e1;
@@ -554,6 +551,131 @@ a, span, th, td, i, em, h1, h2, h3, h4, h5, h6 {
     right: 0;
     top: 38px;
 }
+.footer {
+    background: #292a32;
+    padding: 50px 0 0;
+}
+.footer .footer-con {
+    padding-bottom: 40px;
+}
+.footer .footer-con .footer-con-left {
+    width: 236px;
+    float: left;
+}
+.footer .footer-con .footer-con-left .footer-logo img {
+    width: 230px;
+}
+.footer .footer-con .footer-con-left .footer-con-img {
+    margin-top: 18px;
+    display: inline-block;
+    border: 1px solid #4e4e54;
+    padding: 6px;
+}
+.footer .footer-con .footer-con-left .footer-con-img img {
+    height: 108px;
+    width: 108px;
+    display: block;
+}
+.footer .footer-con .footer-con-right {
+    padding-left: 304px;
+}
+.footer .footer-con .footer-con-right .footer-con-right-text p {
+    color: #949498;
+    font-size: 14px;
+    line-height: 22px;
+}
+.footer .footer-con .footer-con-right .footer-con-right-text p a {
+    color: #ff8080;
+}
+.footer .footer-con .footer-con-right .footer-tit {
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    position: relative;
+    padding-left: 13px;
+    margin-top: 60px;
+}
+.footer .footer-con .footer-con-right .footer-tit:before {
+    content: '';
+    display: block;
+    height: 18px;
+    background: #fff;
+    width: 3px;
+    position: absolute;
+    top: 4px;
+    left: 0;
+}
+.footer .footer-con .footer-con-right .footer-swiper {
+    position: relative;
+}
+.footer .footer-con .footer-con-right .footer-swiper .swiper-slide {
+    position: relative;
+    height: 80px;
+}
+.footer .footer-con .footer-con-right .footer-swiper .swiper-slide img {
+    display: block;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transition: 0.4s ease all;
+    transition: 0.4s ease all;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+.footer .footer-con .footer-con-right .footer-swiper .swiper-slide img + img {
+    max-width: 100%;
+    opacity: 0;
+}
+.footer .footer-con .footer-con-right .footer-swiper .swiper-slide img + img:hover {
+    opacity: 1;
+}
+.footer .footer-con .footer-con-right .footer-swiper .arrow-left,
+.footer .footer-con .footer-con-right .footer-swiper .arrow-right {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: -18px;
+    width: 7px;
+    height: 13px;
+    background: url(../images/Morketing9_03.png) no-repeat center center;
+}
+.footer .footer-con .footer-con-right .footer-swiper .arrow-left {
+    transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    right: 20px;
+}
+.footer .foot-text {
+    border-top: 1px solid rgba(148, 148, 152, 0.25);
+    padding: 18px 0;
+}
+.footer .foot-text p {
+    color: #949498;
+    font-size: 14px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

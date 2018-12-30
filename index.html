@@ -12,7 +12,7 @@
     <link rel="shortcut icon" href="asserts/images/favicon.png" type="image/png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@4.4.6/dist/css/swiper.css">
     <link rel="stylesheet" href="asserts/style/index.css">
-    <link rel="stylesheet" href="https://at.alicdn.com/t/font_990755_wma0czdfwje.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_990755_l04o677sehh.css">
     <link rel="stylesheet" href="asserts/style/media.css">
 </head>
 <body style="background: #f6f6f6;">
@@ -91,22 +91,22 @@
                         <p>{{ item.summary }}</p>
                         <div class="in-article-list-fot clearfix">
                             <div class="in-article-list-icon">
-                                <!--<div class="in-article-list-i">-->
-                                <!--<img src="/upload/image/2018-11/ed445ab00377573514c5afb04538b09a.jpg" alt="">-->
-                                <!--<span>Rita</span>-->
-                                <!--</div>-->
                                 <div class="in-article-list-i">
-                                    <i class="iconfont icon-shijian"></i>
+                                    <i class="iconfont icon-tag"></i>
+                                <span>{{ item.tag }}</span>
+                                </div>
+                                <div class="in-article-list-i">
+                                    <i class="iconfont icon-time"></i>
                                     <span>{{ item.publish_time }}</span>
                                 </div>
                             </div>
 
                             <div class="in-article-list-zan">
-                                <i class="iconfont icon-good"></i>
+                                <i class="iconfont icon-zan"></i>
                                 <span class="num">{{ item.zan }}</span>
                             </div>
                             <div class="in-article-list-zan">
-                                <i class="iconfont icon-liulan"></i>
+                                <i class="iconfont icon-pv"></i>
                                 <span>{{ item.views }}</span>
                             </div>
                         </div>
@@ -153,6 +153,26 @@
     </div>
 </div>
 <!-- content:end -->
+<div class="footer">
+    <div class="footer-con content clearfix">
+        <div class="footer-con-left">
+            <a href="/" class="footer-logo">
+                <img src="asserts/images/logo.png" alt="">
+            </a>
+            <!--<div class="footer-con-img">-->
+                <!--<img src="asserts/images/qrcode.jpg" alt="">-->
+            <!--</div>-->
+        </div>
+        <div class="footer-con-right">
+            <div class="footer-con-right-text">
+                <p><span>跨境阿米show系隶属于广州阿米科技有限公司的跨境电商新商业智囊媒体，专注跨境电商企业品牌战略咨询媒体服务，微信搜索公众号「跨境阿米show」获取更多深度行业策略分析。</span> <a href="about">详情</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="foot-text">
+        <p>Copyright © 2013-2019 morketing 粤ICP备19000000-1号 <span>地址：广东省广州市</span></p>
+    </div>
+</div>
 <script>
     var mySwiper = new Swiper('.in-banner .swiper-container', {
         loop: true,
