@@ -390,8 +390,9 @@ a, span, th, td, i, em, h1, h2, h3, h4, h5, h6 {
     animation: Circle 1s linear infinite;
     -webkit-animation: Circle 1s linear infinite;
 }
-
-
+.in-info-left .in-article .in-article-group {
+    background: #fff;
+}
 
 
 
