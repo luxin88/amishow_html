@@ -11,7 +11,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@4.4.6/dist/js/swiper.js"></script>
     <link rel="shortcut icon" href="asserts/images/favicon.png" type="image/png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@4.4.6/dist/css/swiper.css">
-    <link rel="stylesheet" href="asserts/style/index.css">
+    <link rel="stylesheet" href="asserts/style/article_list.css">
     <link rel="stylesheet" href="https://at.alicdn.com/t/font_990755_dl2kab2fzyj.css">
     <link rel="stylesheet" href="asserts/style/media.css">
 </head>
@@ -25,8 +25,8 @@
             </a>
             <div class="btn-sk clearfix">
                 <div class="nav">
-                    <a href="#" class="active">首页</a>
-                    <a href="article_list.html">@米专栏</a>
+                    <a href="index.html">首页</a>
+                    <a href="#" class="active">@米专栏</a>
                     <a href="#">@米脱口秀</a>
                     <a href="#">跨境新商业百人</a>
                     <a href="#">@米导读</a>
@@ -55,32 +55,12 @@
 <div class="in-info content clearfix">
     <div class="in-info-left">
         <div class="in-banner">
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide" style="background-image: url(uploads/0.jpg)">
-                        <a href="#" target="_blank"></a>
-                        <h3>美元余额宝如何给卖家钱生钱？</h3>
-                    </div>
-                    <div class="swiper-slide" style="background-image: url(uploads/1.jpg)">
-                        <a href="#" target="_blank"></a>
-                        <h3>应对跨境电商动荡期不传秘方竟被公开？</h3>
-                    </div>
-                    <div class="swiper-slide" style="background-image: url(uploads/2.jpg)">
-                        <a href="#" target="_blank"></a>
-                        <h3>发力本土化Tophatter新团队新模式掀起跨境新浪潮</h3>
-                    </div>
-                </div>
-                <div class="swiper-pagination"></div>
+            <div class="content-description">
+                <h1>@米专栏</h1>
+                <p>@米专栏介绍米专栏介绍米专栏介绍米专栏介绍米专栏介绍米专栏介绍米专栏介绍米专栏介绍米专栏介绍米专栏介绍米专栏介绍米专栏介绍米专栏介绍米专栏介绍米专栏介绍米专栏介绍米专栏介绍米专栏介绍米专栏介绍米专栏介绍米专栏介绍</p>
             </div>
         </div>
         <div class="in-article">
-            <div class="in-article-nav">
-                <a href="javascript:;" class="active">案例</a>
-                <a href="javascript:;">品牌</a>
-                <a href="javascript:;">解读</a>
-                <a href="javascript:;">人物</a>
-                <a href="javascript:;">专访</a>
-            </div>
             <div class="in-article-group">
                 <a v-bind:href="item.url" class="in-article-list" v-for="item in list">
                     <div class="in-article-list-img" v-bind:style="'background-image: url('+item.features_image+')'">
@@ -126,29 +106,45 @@
                 <span>广告</span>
             </a>
         </div>
-        <div class="in-right-video">
+        <div class="in-right-reading">
             <h3 class="in-info-right-title">
-                <i class="iconfont icon-video"></i>推荐视频</h3>
-            <a href="V1" class="in-right-video-list">
-                <img class="in-right-video-listImg" src="uploads/4.jpg" alt="发力本土化Tophatter新团队新模式掀起跨境新浪潮">
-                <div class="in-right-video-listImg-text">
-                    <p>发力本土化Tophatter新团队新模式掀起跨境新浪潮</p>
-                </div>
-            </a>
-            <a href="V2" class="in-right-video-list">
-                <img class="in-right-video-listImg" src="uploads/5.jpg" alt="发力本土化Tophatter新团队新模式掀起跨境新浪潮">
-                <div class="in-right-video-listImg-text">
-                    <p>发力本土化Tophatter新团队新模式掀起跨境新浪潮</p>
-                </div>
-            </a>
-
-            <a href="V3" class="in-right-video-list">
-                <img class="in-right-video-listImg" src="uploads/6.jpg" alt="发力本土化Tophatter新团队新模式掀起跨境新浪潮">
-                <div class="in-right-video-listImg-text">
-                    <p>发力本土化Tophatter新团队新模式掀起跨境新浪潮</p>
-                </div>
-            </a>
-
+                <i class="iconfont icon-reading"></i>推荐阅读</h3>
+                <a href="#" class="in-right-reading-list clearfix">
+                    <div class="in-right-reading-listImg">
+                        <img src="uploads/6.jpg">
+                    </div>
+                    <div class="in-right-reading-listText">
+                        <p>Morketing电商营销12.25监测：蚂蚁金服或以7亿美元收购WorldFirst；华为智能手机全年发货量破2亿台;1月1日起我国将调整部分进出口关税</p>
+                        <span>2018-12-25</span>
+                    </div>
+                </a>
+                <a href="#" class="in-right-reading-list clearfix">
+                    <div class="in-right-reading-listImg">
+                        <img src="uploads/5.jpg" alt="B 站继续拓宽会员来源，这次它要跟饿了么合作">
+                    </div>
+                    <div class="in-right-reading-listText">
+                        <p>B 站继续拓宽会员来源，这次它要跟饿了么合作</p>
+                        <span>2018-12-25</span>
+                    </div>
+                </a>
+                <a href="#" class="in-right-reading-list clearfix">
+                    <div class="in-right-reading-listImg">
+                        <img src="uploads/4.jpg">
+                    </div>
+                    <div class="in-right-reading-listText">
+                        <p>Morketing电商营销12.29监测：Visa将以2.506亿美元收购跨境支付公司Earthport；优衣库大规模扩张国内线下门店；天猫国际计划将商品数扩容至百万</p>
+                        <span>2018-12-29</span>
+                    </div>
+                </a>
+                <a href="#" class="in-right-reading-list clearfix">
+                    <div class="in-right-reading-listImg">
+                        <img src="uploads/3.jpg" alt="粉丝3500万，月收入超1500万，军武科技如何深耕垂直领域？">
+                    </div>
+                    <div class="in-right-reading-listText">
+                        <p>粉丝3500万，月收入超1500万，军武科技如何深耕垂直领域？</p>
+                        <span>2018-12-27</span>
+                    </div>
+                </a>
         </div>
         <div class="in-right-activity">
             <h3 class="in-info-right-title"><i class="iconfont icon-activity"></i> 热门活动</h3>
@@ -189,6 +185,30 @@
                 <span class="activity-status activity-status-stop"><i class="iconfont icon-stop"></i></span>
             </a>
         </div>
+        <div class="in-right-video">
+            <h3 class="in-info-right-title">
+                <i class="iconfont icon-video"></i>推荐视频</h3>
+            <a href="V1" class="in-right-video-list">
+                <img class="in-right-video-listImg" src="uploads/4.jpg" alt="发力本土化Tophatter新团队新模式掀起跨境新浪潮">
+                <div class="in-right-video-listImg-text">
+                    <p>发力本土化Tophatter新团队新模式掀起跨境新浪潮</p>
+                </div>
+            </a>
+            <a href="V2" class="in-right-video-list">
+                <img class="in-right-video-listImg" src="uploads/5.jpg" alt="发力本土化Tophatter新团队新模式掀起跨境新浪潮">
+                <div class="in-right-video-listImg-text">
+                    <p>发力本土化Tophatter新团队新模式掀起跨境新浪潮</p>
+                </div>
+            </a>
+
+            <a href="V3" class="in-right-video-list">
+                <img class="in-right-video-listImg" src="uploads/6.jpg" alt="发力本土化Tophatter新团队新模式掀起跨境新浪潮">
+                <div class="in-right-video-listImg-text">
+                    <p>发力本土化Tophatter新团队新模式掀起跨境新浪潮</p>
+                </div>
+            </a>
+
+        </div>
     </div>
 </div>
 <!-- content:end -->
@@ -228,28 +248,6 @@
     </a>
 </div>
 <script>
-    var mySwiper = new Swiper('.in-banner .swiper-container', {
-        loop: true,
-        //direction: 'vertical',
-        spaceBetween: 30,
-        centeredSlides: true,
-        autoplay: {
-            delay: 2500,
-            disableOnInteraction: false,
-        },
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-    });
-    var swiper_wrapper = document.querySelector('.swiper-wrapper');
-    swiper_wrapper.onmouseenter = function () {
-        mySwiper.autoplay.stop();
-    }
-    swiper_wrapper.onmouseout = function () {
-        mySwiper.autoplay.start();
-    }
-
     document.querySelector('.nav-trigger').addEventListener('click', function () {
         document.querySelector('body').classList.toggle('fixme');
         document.querySelector('.header .nav').classList.toggle('active');
@@ -274,7 +272,6 @@
         page++;
         articleVM.loadList(page);
     })
-
 </script>
 
 </body>
