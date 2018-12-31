@@ -714,7 +714,7 @@ a, span, th, td, i, em, h1, h2, h3, h4, h5, h6 {
 }
 .in-info-right .in-right-activity .text {
     background: #fff;
-    padding: 16px 0;
+    padding: 16px 6px;
     border-radius: 2px;
     -moz-border-radius: 2px;
     -webkit-border-radius: 2px;
@@ -754,6 +754,39 @@ a, span, th, td, i, em, h1, h2, h3, h4, h5, h6 {
 .in-right-activity-list:not(:first-child) {
     margin-top: 20px;
 }
+.in-info-right .in-right-activity .in-right-activity-list .activity-status {
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    padding: 3px 0;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 90px;
+    background: rgba(51, 51, 51, 0.7);
+    border-radius: 0 15px 15px 0;
+    padding: 5px;
+}
+
+.in-info-right .in-right-activity .in-right-activity-list .activity-status-start:after {
+    content: "\0020\8fdb\884c\4e2d";
+}
+.in-info-right .in-right-activity .in-right-activity-list .activity-status-stop:after {
+    content: "\0020\5df2\7ed3\675f";
+}
+.in-info-right .in-right-activity .in-right-activity-list .activity-status-start > i {
+    color: #00bb54;
+    font-size: 14px;
+    margin-right: 2px;
+}
+.in-info-right .in-right-activity .in-right-activity-list .activity-status-stop > i {
+    color: rgb(244, 67, 54);
+    font-size: 14px;
+    margin-right: 2px;
+}
+
+
+
 
 
 
