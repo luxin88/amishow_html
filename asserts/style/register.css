@@ -388,6 +388,13 @@ a, span, th, td, i, em, h1, h2, h3, h4, h5, h6 {
     left: 20px;
     transform: translateX(-50%) translateY(-50%);
 }
+.common-form .form-group .verify-button {
+    position: absolute;
+    transform: translateY(-50%);
+    width: 90px;
+    top: 25px;
+    right: 3px;
+}
 .common-form .form-group button {
     display: block;
     width: 100%;
@@ -411,6 +418,7 @@ a, span, th, td, i, em, h1, h2, h3, h4, h5, h6 {
     -moz-user-select: none;
     -ms-user-select: none;
 }
+
 .common-form .form-group .error {
     padding-top: 10px;
 }

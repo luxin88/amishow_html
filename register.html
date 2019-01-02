@@ -11,7 +11,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@4.4.6/dist/js/swiper.js"></script>
     <link rel="shortcut icon" href="asserts/images/favicon.png" type="image/png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@4.4.6/dist/css/swiper.css">
-    <link rel="stylesheet" href="asserts/style/login.css">
+    <link rel="stylesheet" href="asserts/style/register.css">
     <link rel="stylesheet" href="https://at.alicdn.com/t/font_990755_tqxl7urxrxm.css">
     <link rel="stylesheet" href="asserts/style/media.css">
 </head>
@@ -55,7 +55,35 @@
 <div class="content clearfix">
     <div class="y-paddingBottom">
         <div class="y-content">
-            <div class="y-password"></div>
+            <div class="common-form">
+                <div class="login-header">
+                    <span>注册账号</span>
+                    <a href="login.html">已有账号？立即登录</a>
+                </div>
+                <form action="login.html" method="post">
+                    <div class="form-group">
+                        <i class="iconfont icon-mobile"></i>
+                        <input type="tel" name="mobile" class="form-input" placeholder="手机号">
+                    </div>
+                    <div class="form-group">
+                        <i class="iconfont icon-password"></i>
+                        <input type="password" name="password" class="form-input" placeholder="密码">
+                    </div>
+                    <div class="form-group">
+                        <i class="iconfont icon-password"></i>
+                        <input type="password" name="re-password" class="form-input" placeholder="重复密码">
+                    </div>
+                    <div class="form-group">
+                            <i class="iconfont icon-password"></i>
+                            <input type="text" name="verify_code" class="form-input" placeholder="验证码">
+                            <button class="verify-button" type="button">发送验证码</button>
+
+                    </div>
+                    <div class="form-group">
+                        <button type="submit">注&nbsp;&nbsp;册</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 </div>
@@ -96,53 +124,10 @@
     </a>
 </div>
 <script>
-    var mySwiper = new Swiper('.in-banner .swiper-container', {
-        loop: true,
-        //direction: 'vertical',
-        spaceBetween: 30,
-        centeredSlides: true,
-        autoplay: {
-            delay: 2500,
-            disableOnInteraction: false,
-        },
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-    });
-    var swiper_wrapper = document.querySelector('.swiper-wrapper');
-    swiper_wrapper.onmouseenter = function () {
-        mySwiper.autoplay.stop();
-    }
-    swiper_wrapper.onmouseout = function () {
-        mySwiper.autoplay.start();
-    }
-
     document.querySelector('.nav-trigger').addEventListener('click', function () {
         document.querySelector('body').classList.toggle('fixme');
         document.querySelector('.header .nav').classList.toggle('active');
     });
-
-    var page = 1;
-
-    var articleVM = new Vue({
-        el: '.in-article-group',
-        data: {
-            list: []
-        },
-        methods: {
-            loadList: function (page) {
-                var that = this;
-                axios.get("in_article.json?page=" + page).then(response => (this.list = this.list.concat(response.data.payload)));
-            }
-        }
-    });
-    articleVM.loadList(page);
-    document.querySelector('.in-info-group-btn').addEventListener('click', function () {
-        page++;
-        articleVM.loadList(page);
-    })
-
 </script>
 
 </body>
