@@ -188,6 +188,7 @@ a, span, th, td, i, em, h1, h2, h3, h4, h5, h6 {
 }
 .footer .footer-con {
     padding-bottom: 40px;
+    min-height: 200px;
 }
 .footer .footer-con .footer-con-left {
     width: 236px;
